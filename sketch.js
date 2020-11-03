@@ -4,7 +4,7 @@ var stars = [];
 var velocity =2;
 
 // number of stars
-for (var i = 0; i <= 100; i++){
+for (var i = 0; i <= 250; i++){
     var circle = new Path.Circle(new Point(view.size.width, view.size.height)* Point.random(), Math.random()*3);
     stars.push(circle);
     circle.fillColor = 'white';
@@ -82,6 +82,8 @@ var bodyFinal = new Group ({
 
 var bodyPos = new Point(5,0);
 
+
+// Animation
 function onFrame(event){
     var randomColor = colorArray[Math.floor(Math.random()*colorArray.length)];
 
@@ -104,16 +106,15 @@ function onFrame(event){
 }
 
 
+// Text
 var thereIs = new PointText(new Point(view.size.width/6, view.size.height/1.8));
 thereIs.justification = 'left';
 thereIs.fillColor = 'white';
 thereIs.content = 'There is';
 thereIs.fontSize = '80px'
-// thereIs.fontFamily = 'Press Start 2P';
 
 var amongUs = new PointText(new Point(view.size.width/1.2, view.size.height/1.8));
 amongUs.justification = 'right';
 amongUs.fillColor = 'white';
 amongUs.content = 'among us';
 amongUs.fontSize = '80px'
-// amongUs.fontFamily = 'Press Start 2P';
